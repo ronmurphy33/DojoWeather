@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="navbar">
+            <h1>DojoWeather</h1>
+            <div id="cities">
+                <p class="city" onclick="alert('Loading weather report...')">Burbank</p>
+                <p class="city" onclick="alert('Loading weather report...')">Chicago</p>
+                <p class="city" onclick="alert('Loading weather report...')">Dallas</p>
+            </div>
+        </div>
+        <div id="main-page">
+            <div id="citybar"> 
+                <h2 id="currentcity">San Jose</h2>
+                <div id="tempchange">
+                    <p>show temperature in  </p>
+                    <select name="temp" id="temp" onchange="tempConvert(this)">
+                        <option value="cel">&#8451;</option>
+                        <option value="far">&#8457;</option>
+                    </select>
+                </div>
+            </div>
+            <div id="weatherweek" class="weathergraphics">
+                <div id="today" class="weathercard">
+                    <h3>Today</h3>
+                    <img src="assets/some_rain.png" alt="rainy cloud image" class="weather-icon">
+                    <p>some rain</p>
+                    <div class="temp-splitter">
+                        <span class="high" id="temp1">24</span>
+                        <span class="low" id="temp2">18</span>
+                    </div>
+                </div>
+                <div id="tomorrow" class="weathercard">
+                    <h3>Tomorrow</h3>
+                    <img src="assets/some_sun.png" alt="sunny image" class="weather-icon">
+                    <p>some sun</p>
+                    <div class="temp-splitter">
+                        <span class="high" id="temp3">27</span>
+                        <span class="low" id="temp4">19</span>
+                    </div>
+                </div>
+                <div id="friday" class="weathercard" >
+                    <h3>Friday</h3>
+                    <img src="assets/some_clouds.png" alt="cloud image" class="weather-icon">
+                    <p>some clouds</p>
+                    <div class="temp-splitter">
+                        <span class="high" id="temp5">21</span>
+                        <span class="low" id="temp6">16</span>
+                    </div>
+                </div>
+                <div id="saturday" class="weathercard">
+                    <h3>Saturday</h3>
+                    <img src="assets/some_sun.png" alt="sunny image" class="weather-icon">
+                    <p>some sun</p>
+                    <div class="temp-splitter">
+                        <span class="high" id="temp7">26</span>
+                        <span class="low" id="temp8">21</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="cookiemessage">
+            <img src="assets/cookie.png" alt="cookie symbol" id="cookie-img">
+            <div id="cookie-time">
+                <h4>Stop! cookie time</h4>
+                <p id="cookie-text">We use cookies! (sadly not the edible ones) to personalize content and ads, to provide social media fetures and to analyse our traffic. <span id="underline">Read more...</span></p>
+            </div>
+            <button id="accept" onclick="removeMessage()">I Accept</button>
+        </div>
+    </div>
+    
+</body>
+</html>
